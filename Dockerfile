@@ -1,5 +1,7 @@
 FROM debian:bookworm-slim
 
+LABEL org.opencontainers.image.source=https://github.com/grodin/tinytex-base
+
 WORKDIR /var/local
 
 RUN useradd --system --uid 1000 --create-home --user-group latex-user
