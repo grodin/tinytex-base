@@ -4,12 +4,11 @@ WORKDIR /var/local
 
 RUN useradd --system --uid 1000 --create-home --user-group latex-user
 
-RUN apt-get update && \ 
+RUN apt-get update && \
   apt-get install -y \
   wget \
   perl \
   gpg \
-  mercurial \
   libfontconfig1 && \
   apt-get clean
 
