@@ -20,5 +20,7 @@ RUN echo 'export PATH="${HOME}/bin:${PATH}"' >> ${HOME}/.bashrc
 
 ARG TINYTEX_VERSION
 
+ENV TINYTEX_VERSION=${TINYTEX_VERSION:-v2023.06}
+
 RUN wget -qO- "https://yihui.name/gh/tinytex/tools/install-unx.sh" | sh \
   && "${HOME}/bin/"fmtutil-sys --all
